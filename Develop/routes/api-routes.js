@@ -7,7 +7,6 @@ router.post("/workouts", function (req, res) {
         if (err) return handleError(err);
         res.json(result);
     });
-
 });
 
 router.put("/workouts/:id", function (req, res) {
@@ -19,23 +18,20 @@ router.put("/workouts/:id", function (req, res) {
         Workout.updateOne({ _id: req.params.id }, workout, function (err, result) {
             res.json(result);
         });
-    })
-})
+    });
+});
 
 router.get("/workouts/range", function (req, res) {
     Workout.find({}, function(err, result) {
         res.json(result);
-    })
+    });
+});
 
-})
-
-router.get("/api/workouts", function (req, res) {
-    Workout.find({}, function(err, result) {
+router.get("/workouts", function (req, res) {
+    Workout.create({}, function(err, result) {
         if (err) throw err;
-        console.log(result);
         res.json(result);
-    })
-
-})
+    });
+});
 
 module.exports = router;
