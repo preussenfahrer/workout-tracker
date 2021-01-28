@@ -2,7 +2,8 @@ const router = require("express").Router();
 const Workout = require("../models/workoutModel.js")
 
 router.post("/workouts", function (req, res) {
-    Workout.create(req.body, function (err, result) {
+    Workout.create({}, function (err, result) {
+        console.log(result);
         if (err) return handleError(err);
         res.json(result);
     });
@@ -22,12 +23,14 @@ router.put("/workouts/:id", function (req, res) {
 
 router.get("/workouts/range", function (req, res) {
     Workout.find({}, function(err, result) {
+        console.log(result);
         res.json(result);
     });
 });
 
 router.get("/workouts", function (req, res) {
-    Workout.create({}, function(err, result) {
+    Workout.find({}, function(err, result) {
+        console.log(result);
         if (err) throw err;
         res.json(result);
     });
