@@ -1,11 +1,5 @@
 const mongoose = require("mongoose");
 
-// connects to database
-mongoose.connect("mongodb://localhost/workoutdb", {
-    useNewUrlParser: true,
-    useFindAndModify: false
-});
-
 const Schema = mongoose.Schema;
 
 const WorkoutSchema = new Schema({

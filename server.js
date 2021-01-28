@@ -7,7 +7,6 @@ const apiRoutes = require("./routes/api-routes.js");
 
 const PORT = process.env.PORT || 3000;
 
-const Workout = require("./models/workoutModel.js");
 const app = express();
 
 app.use(morgan("dev"));
