@@ -12,15 +12,18 @@ const WorkoutSchema = new Schema({
 exercises: [{
     type: {
         type: String,
-        // may have to rework 'required:' s
+        required: ""
+        
     },
     name: {
         type: String,
         trim: true,
+        required: ""
         
     },
     weight: {
         type: Number,
+        required: ""
         
     },
     sets: {
@@ -28,14 +31,17 @@ exercises: [{
     },
     reps: {
         type: Number,
+        required: ""
         
     },
     distance: {
         type: Number,
+        required: ""
         
     },
     time: {
         type: Number,
+        required: ""
         
     }
 }],
