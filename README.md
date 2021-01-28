@@ -13,7 +13,7 @@
 # Description
 Workout-Tracker (_WT_) is a simple to use way to keep up with your personal fitness goals. When you are holding yourself accountable for meeting those goals, there is an increased likelihood that you will meet them. Also, it is a very satisfying feeling to log your activity and see how much you've accomplished. With Fitness-Tracker, this is all within a few clicks!
 # Usage
-Checkout the video link here to see how to use _WT_: https://drive.google.com/file/d/1VfUignCEkAt037wnYS7pyNY1aeFEbaNv/view
+Checkout the video link here to see how to use _WT_: https://drive.google.com/file/d/1-mfqF96JJE6aINam-9rdASNiG68_r-ai/view
 # Technologies
 _WT_ uses mongoose for its database functionality and MongoDB, in addition to the following packages: `express`, `mongoose`, and `morgan`.
 # Installation

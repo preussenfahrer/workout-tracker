@@ -2,53 +2,55 @@ const mongoose = require("mongoose");
 
 // connects to database
 mongoose.connect("mongodb://localhost/workoutdb", {
-  useNewUrlParser: true,
-  useFindAndModify: false
+    useNewUrlParser: true,
+    useFindAndModify: false
 });
 
 const Schema = mongoose.Schema;
 
 const WorkoutSchema = new Schema({
-exercises: [{
-    type: {
-        type: String,
-        
-    },
-    name: {
-        type: String,
-        trim: true,
-        
-    },
-    weight: {
-        type: Number,
+    exercises: [{
+        type: {
+            type: String,
 
-        
-    },
-    sets: {
-        type: Number
-    },
-    reps: {
-        type: Number,
+        },
+        name: {
+            type: String,
+            trim: true,
 
-        
-    },
-    distance: {
-        type: Number,
+        },
+        weight: {
+            type: Number,
 
-        
-    },
-    time: {
-        type: Number,
 
-        
+        },
+        sets: {
+            type: Number
+        },
+        reps: {
+            type: Number,
+
+
+        },
+        distance: {
+            type: Number,
+
+
+        },
+        time: {
+            type: Number,
+
+
+        }
+    }],
+
+    day: {
+        type: Date,
+        default: new Date(Date.now())
     }
-}],
 
-date: {
-    type: Date,
-    default: Date.now()
-}
 });
+
 
 const Workout = mongoose.model("Workout", WorkoutSchema);
 
